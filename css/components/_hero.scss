@@ -9,7 +9,7 @@
 .hero-title {
     @include flex(center, center, column);
     text-align: center;
-    gap: 0.5rem;
+    gap: 1rem;
 
     h1 {
         color: $gray-900;
@@ -34,6 +34,7 @@
 
     video {
         width: 100%;
+        border-radius: 0.5rem;
     }
 
     .btn {
