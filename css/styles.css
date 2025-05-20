@@ -108,10 +108,6 @@ h5 {
   font-size: 1.333rem;
 }
 
-p {
-  margin-bottom: 1rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -164,82 +160,9 @@ p {
   font-size: 1rem;
   padding: 0.5rem 0.75rem;
 }
-.btn--primary {
-  background-color: #2563eb;
-  border: solid 1px #2563eb;
-  color: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-.btn--primary:hover {
-  background-color: #1d4ed8;
-}
-.btn--primary:active {
-  background-color: #1e40af;
-}
-.btn--secondary {
-  border: solid 1px #d1d5db;
-  background-color: #ffffff;
-  color: #374151;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-.btn--secondary:hover {
-  background-color: #f9fafb;
-  color: #191919;
-}
-.btn--secondary:active {
-  background-color: #f3f4f6;
-  color: #191919;
-}
-.btn--ghost {
-  color: #374151;
-}
-.btn--ghost:hover {
-  background-color: #f3f4f6;
-  color: #191919;
-}
-.btn--ghost:active {
-  background-color: #e5e7eb;
-  color: #191919;
-}
-
-.btn__ghost {
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  color: #374151;
-  font-weight: 500;
-}
-.btn__ghost:hover {
-  background-color: #f3f4f6;
-  color: #191919;
-}
-.btn__ghost:active {
-  background-color: #e5e7eb;
-  color: #191919;
-}
-
-/* Gray */
-/* Brand Colors */
-.bg-gray {
-  background: #fbfbfb;
-}
-
-.btn {
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 0.75rem;
-  transition: background 0.2s ease;
-}
-.btn--small {
-  font-size: 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-}
-.btn--medium {
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+.btn--large {
+  font-size: 1.25rem;
+  padding: 0.75rem 1rem;
 }
 .btn--primary {
   background-color: #2563eb;
@@ -348,4 +271,55 @@ nav {
 .nav-right {
   display: flex;
   gap: 1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem 2rem;
+  gap: 2rem;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.hero-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+.hero-title h1 {
+  color: #111827;
+}
+.hero-title p {
+  font-size: 1.777rem;
+  color: #4b5563;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-video video {
+  width: 100%;
+}
+.hero-video .btn {
+  margin-top: -1.5rem;
 }/*# sourceMappingURL=styles.css.map */

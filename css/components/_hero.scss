@@ -1,0 +1,42 @@
+.hero {
+    @include flex(center, center, column);
+    padding: 10rem 2rem;
+    gap: 2rem;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.hero-title {
+    @include flex(center, center, column);
+    text-align: center;
+    gap: 0.5rem;
+
+    h1 {
+        color: $gray-900;
+    }
+
+    p {
+        font-size: $h4;
+        color: $gray-600;
+        font-weight: 400;
+    }
+}
+
+.hero-actions {
+    @include flex(center, center, row);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-video {
+    width: 100%;
+    @include flex(center, center, column);
+
+    video {
+        width: 100%;
+    }
+
+    .btn {
+        margin-top: -1.5rem;
+    }
+}
