@@ -259,6 +259,7 @@ nav {
 }
 .nav-left img {
   width: 7.5em;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -352,4 +353,60 @@ nav {
 }
 .hero-video .btn {
   margin-top: -1.5rem;
+}
+
+.hiw {
+  overflow: hidden;
+  position: relative;
+}
+
+.hiw-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #f3f4f6;
+  pointer-events: none;
+}
+
+.hiw-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 8rem 4rem 30rem 4rem;
+  gap: 3rem;
+  max-width: 1080px;
+  margin: auto;
+  overflow: hidden;
+}
+.hiw-wrapper .hiw-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hiw-wrapper .hiw-title h2 {
+  text-align: center;
+}
+.hiw-wrapper .hiw-title p {
+  font-size: 1.333rem;
+  text-align: center;
+  color: #4b5563;
+}
+.hiw-wrapper img {
+  width: 100%;
+  display: block;
+}
+.hiw-wrapper .mobile-image {
+  display: none;
+}
+.hiw-wrapper .hiw-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
 }/*# sourceMappingURL=styles.css.map */
