@@ -9,6 +9,7 @@
     @if $btn-size == small {
         font-size: 1rem;
         padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
     } @else if $btn-size == medium {
         font-size: 1rem;
         padding: 0.5rem 0.75rem;   
