@@ -227,14 +227,14 @@ h5 {
 .btn--pill {
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: white;
-  color: #1f2937;
-  border: solid 1px #d1d5db;
+  background-color: #030712;
+  color: #ffffff;
+  border: solid 1px #030712;
   border-radius: 4rem;
+  transition: transform 0.3s ease;
 }
 .btn--pill:hover {
-  background-color: #f9fafb;
-  color: #111827;
+  transform: scale(1.1, 1.1);
 }
 .btn--pill:active {
   background-color: #f3f4f6;
