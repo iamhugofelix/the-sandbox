@@ -1,6 +1,6 @@
 .hero {
     @include flex(center, center, column);
-    padding: 10rem 2rem;
+    padding: 10rem 4rem;
     gap: 2rem;
     max-width: 1080px;
     margin: auto;
@@ -35,6 +35,9 @@
     video {
         width: 100%;
         border-radius: 0.5rem;
+        pointer-events: none;
+        z-index: -1;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     }
 
     .btn {

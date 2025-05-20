@@ -85,14 +85,14 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4.209rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -2px;
   line-height: 1.1;
 }
 
 h2 {
   font-size: 3.157rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -1px;
 }
 
@@ -182,19 +182,19 @@ h5 {
   width: 1.25rem;
 }
 .btn--primary {
-  background-color: #1f2937;
-  border: solid 1px #1f2937;
+  background-color: #2563eb;
+  border: solid 1px #2563eb;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   color: #ffffff;
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(255, 255, 255, 0.075) 0 1px 1px;
 }
 .btn--primary:hover {
-  background-color: #111827;
-  border: solid 1px #111827;
+  background-color: #1d4ed8;
+  border: solid 1px #1d4ed8;
 }
 .btn--primary:active {
-  background-color: #030712;
-  border: solid 1px #030712;
+  background-color: #1e40af;
+  border: solid 1px #1e40af;
   box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
 }
 .btn--secondary {
@@ -245,7 +245,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
 }
 
 .nav-left {
@@ -256,6 +256,9 @@ nav {
 .nav-left ul {
   display: flex;
   gap: 0.5rem;
+}
+.nav-left img {
+  width: 7.5em;
 }
 
 .dropdown {
@@ -300,7 +303,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10rem 2rem;
+  padding: 10rem 4rem;
   gap: 2rem;
   max-width: 1080px;
   margin: auto;
@@ -342,6 +345,9 @@ nav {
 .hero-video video {
   width: 100%;
   border-radius: 0.5rem;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 .hero-video .btn {
   margin-top: -1.5rem;
