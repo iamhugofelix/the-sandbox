@@ -1,0 +1,49 @@
+/* Gray */
+$gray-950: #030712;
+$gray-900: #111827;
+$gray-800: #1f2937;
+$gray-700: #374151;
+$gray-600: #4b5563;
+$gray-500: #6b7280;
+$gray-400: #9ca3af;
+$gray-300: #d1d5db;
+$gray-200: #e5e7eb;
+$gray-100: #f3f4f6;
+$gray-50: #f9fafb;
+$white: #ffffff;
+
+/* Brand Colors */
+$brand-primary-lighter: #bfdbfe;
+$brand-primary-light: #60a5fa;
+$brand-primary-base: #2563eb;
+$brand-primary-dark: #1d4ed8;
+$brand-primary-darker: #1e40af;
+
+
+
+$black: #191919;
+$cyan: #338cf4;
+$blue: #0064da;
+$light-gray: #fbfbfb;
+
+
+@mixin background($color) {
+    @if $color == 'black' {
+        background: $black;
+        color: $white;
+    }
+    @if $color == 'blue' {
+        background: $blue;
+        color: $white;
+    }
+    @if $color == 'white' {
+        background: $white;
+        color: $blue;
+    }
+}
+
+.bg {
+    &-gray {
+        background: $light-gray;
+    }
+}

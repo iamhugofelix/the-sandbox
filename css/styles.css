@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Foundations */
+/* Gray */
+/* Brand Colors */
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 .bg-gray {
   background: #fbfbfb;
 }
@@ -44,7 +47,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -54,49 +57,43 @@ table {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: gainsboro;
+/* Font family */
+/* Make text crispier */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-a:hover {
-  cursor: pointer;
-}
-
+/* Font sizes */
+/* Font weights */
 html {
   font-size: 100%;
-}
-
-/*16px*/
+} /*16px*/
 body {
-  background: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  color: #000000;
-}
-
-p {
-  margin-bottom: 1rem;
+  font-family: "Onest", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 1rem 0 0.38rem;
-  font-weight: 400;
-  line-height: 1.3;
+  text-wrap: balance;
+  font-weight: 1.2;
 }
 
 h1 {
-  margin-top: 0;
   font-size: 4.209rem;
+  font-weight: 600;
+  letter-spacing: -2px;
 }
 
 h2 {
   font-size: 3.157rem;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
 
 h3 {
@@ -111,13 +108,8 @@ h5 {
   font-size: 1.333rem;
 }
 
-small, .text_small {
-  font-size: 0.75rem;
-}
-
-.subtitle {
-  max-width: 75ch;
-  margin: 0 auto;
+p {
+  margin-bottom: 1rem;
 }
 
 .text-center {
@@ -149,8 +141,173 @@ small, .text_small {
     font-size: 1rem;
   }
 }
-
-html, body {
-  font-family: 'Inter', sans-serif;
+/* Components */
+/* Gray */
+/* Brand Colors */
+.bg-gray {
+  background: #fbfbfb;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.btn {
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease;
+}
+.btn--small {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+.btn--medium {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+.btn--primary {
+  background-color: #2563eb;
+  border: solid 1px #2563eb;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background-color: #1d4ed8;
+}
+.btn--primary:active {
+  background-color: #1e40af;
+}
+.btn--secondary {
+  border: solid 1px #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+}
+.btn--secondary:hover {
+  background-color: #f9fafb;
+  color: #191919;
+}
+.btn--secondary:active {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn--ghost {
+  color: #374151;
+}
+.btn--ghost:hover {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn--ghost:active {
+  background-color: #e5e7eb;
+  color: #191919;
+}
+
+.btn__ghost {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+}
+.btn__ghost:hover {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn__ghost:active {
+  background-color: #e5e7eb;
+  color: #191919;
+}
+
+/* Gray */
+/* Brand Colors */
+.bg-gray {
+  background: #fbfbfb;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease;
+}
+.btn--small {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+.btn--medium {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+.btn--primary {
+  background-color: #2563eb;
+  border: solid 1px #2563eb;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background-color: #1d4ed8;
+}
+.btn--primary:active {
+  background-color: #1e40af;
+}
+.btn--secondary {
+  border: solid 1px #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+}
+.btn--secondary:hover {
+  background-color: #f9fafb;
+  color: #191919;
+}
+.btn--secondary:active {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn--ghost {
+  color: #374151;
+}
+.btn--ghost:hover {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn--ghost:active {
+  background-color: #e5e7eb;
+  color: #191919;
+}
+
+.btn__ghost {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+}
+.btn__ghost:hover {
+  background-color: #f3f4f6;
+  color: #191919;
+}
+.btn__ghost:active {
+  background-color: #e5e7eb;
+  color: #191919;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.nav-left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-left ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,10 +1,7 @@
-@import 'colors';
-@import 'reset';
-@import 'typography';
- 
+/* Foundations */
+@import './foundations/colors';
+@import './foundations/reset';
+@import './foundations/typography';
 
-html, body {
-    font-family: 'Inter', sans-serif;
-}
-
- 
+/* Components */
+@import './components/all_components'

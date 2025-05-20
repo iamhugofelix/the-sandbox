@@ -1,0 +1,78 @@
+@import '../foundations/colors';
+@import '../foundations/mixins';
+
+
+.btn {
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: background 0.2s ease;
+
+    // Sizes
+    &--small {@include btn-size(small)};
+    &--medium {@include btn-size(medium)};
+    &--large {@include btn-size(large)};
+
+    // Variants
+    &--primary {
+        background-color: $brand-primary-base;
+        border: solid 1px $brand-primary-base;
+        color: $white;
+
+        &:hover {
+            background-color: $brand-primary-dark;
+        }
+        &:active {
+            background-color: $brand-primary-darker;
+        }
+    }
+
+    &--secondary {
+        border: solid 1px $gray-300;
+        background-color: $white;
+        color: $gray-700;
+
+        &:hover {
+            background-color: $gray-50;
+            color: $black;
+        }
+        &:active {
+            background-color: $gray-100;
+            color: $black;
+        }
+    }
+
+    &--ghost {
+        color: $gray-700;
+
+        &:hover {
+            background-color: $gray-100;
+            color: $black;
+        }
+        &:active {
+            background-color: $gray-200;
+            color: $black;
+        }
+    }
+}
+
+
+
+.btn__ghost {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    color: $gray-700;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $gray-100;
+        color: $black;
+    }
+    &:active {
+        background-color: $gray-200;
+        color: $black;
+    }
+}

@@ -1,0 +1,87 @@
+/* Font family */
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+/* Make text crispier */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Font sizes */
+$h1: 4.209rem;
+$h2: 3.157rem;
+$h3: 2.369rem;
+$h4: 1.777rem;
+$h5: 1.333rem;
+$p: 1rem;
+
+/* Font weights */
+$bold: 600;
+$normal: 300;
+$light: 200;
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  font-family: 'Onest', sans-serif;
+  line-height: 1.5;
+  font-weight: $normal;
+}
+
+h1, h2, h3, h4, h5 {
+  text-wrap: balance;
+  font-weight: 1.2;
+}
+
+h1 {
+  font-size: $h1;
+  font-weight: $bold;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: $bold;
+  letter-spacing: -1px;
+}
+
+h3 {font-size: $h3}
+
+h4 {font-size: $h4;}
+
+h5 {font-size: $h5;}
+
+p {margin-bottom: 1rem;}
+
+
+// typography helpers
+$alignments: center, right, top; 
+ 
+@each $align in $alignments {
+    .text-#{$align} {
+        text-align: $align;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: #{$h1 * 0.50};
+  }
+  h2 {
+    font-size: #{$h2 * 0.90};
+  }
+
+  h3 {
+    font-size: #{$h3 * 0.70}
+  };
+
+  h4 {
+    font-size: #{$h4 * 0.70}
+  };
+
+  h5 {
+    font-size: #{1rem}
+  };
+}

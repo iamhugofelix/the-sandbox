@@ -1,0 +1,19 @@
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin btn-size($btn-size) {
+    @if $btn-size == small {
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+    } @else if $btn-size == medium {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;   
+    } @else if $btn-size == small {
+        font-size: 1.25rem;
+        padding: 0.75rem 1rem;  
+    }
+}
