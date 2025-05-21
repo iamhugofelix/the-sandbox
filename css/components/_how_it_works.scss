@@ -1,15 +1,17 @@
 .hiw {
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 
 .hiw-bg {
     position: absolute;
-    top: 0;
-    width: 100%;
+    top: 2rem;
+    left: -2rem;
+    width: 150%;
     height: 50%;
     background-color:$gray-100;
     pointer-events: none;
+    transform: rotate(2deg);
 }
 
 .hiw-wrapper {
@@ -39,6 +41,7 @@
     img {
         width: 100%;
         display: block;
+        pointer-events: none;
       }
 
     .mobile-image {
