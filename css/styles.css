@@ -365,7 +365,7 @@ nav {
   top: 2rem;
   left: -2rem;
   width: 150%;
-  height: 50%;
+  height: 70%;
   background-color: #f3f4f6;
   pointer-events: none;
   transform: rotate(2deg);
@@ -377,7 +377,7 @@ nav {
   align-items: center;
   flex-direction: column;
   position: relative;
-  padding: 8rem 4rem 30rem 4rem;
+  padding: 8rem 4rem 8rem 4rem;
   gap: 3rem;
   max-width: 1080px;
   margin: auto;

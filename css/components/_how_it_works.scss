@@ -8,7 +8,7 @@
     top: 2rem;
     left: -2rem;
     width: 150%;
-    height: 50%;
+    height: 70%;
     background-color:$gray-100;
     pointer-events: none;
     transform: rotate(2deg);
@@ -17,7 +17,7 @@
 .hiw-wrapper {
     @include flex(center, center, column);
     position: relative;
-    padding: 8rem 4rem 30rem 4rem;
+    padding: 8rem 4rem 8rem 4rem;
     gap: 3rem;
     max-width: 1080px;
     margin: auto;
