@@ -6,12 +6,11 @@
 .hiw-bg {
     position: absolute;
     top: 2rem;
-    left: -2rem;
-    width: 150%;
-    height: 70%;
+    width: 100vw;
+    height: 65%;
     background-color:$gray-100;
     pointer-events: none;
-    transform: rotate(2deg);
+    // transform: rotate(2deg);
 }
 
 .hiw-wrapper {
@@ -19,13 +18,15 @@
     position: relative;
     padding: 8rem 4rem 8rem 4rem;
     gap: 3rem;
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     overflow: hidden;
 
     .hiw-title {
         @include flex(center, center, column);
+        color: $gray-900;
         gap: 0.5rem;
+        max-width: 800px;
 
         h2 {
             text-align: center;
@@ -40,6 +41,7 @@
     
     img {
         width: 100%;
+        max-width: 900px;
         display: block;
         pointer-events: none;
       }

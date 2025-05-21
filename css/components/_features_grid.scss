@@ -1,0 +1,94 @@
+.features {
+    position: relative;
+    @include flex(center, center, column);
+    gap: 4rem;
+    padding: 8rem 4rem;
+    max-width: 1280px;
+    margin: auto;
+
+    .features-bg {
+        background-color: $gray-900;
+        position: absolute;
+        top: 38%;
+        width: 100vw;
+        height: 18rem;
+        // transform: rotate(-1deg);
+        pointer-events: none;
+        z-index: -1;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.features-title{
+    text-align: center;
+    color: $gray-900;
+    max-width: 800px;
+
+    p {
+        font-size: $h5;
+        color: $gray-600;
+    }
+
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+
+    .features-card {
+        @include flex(center, center, column);
+        gap: 0.5rem;
+        padding: 2rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        .card-icon {
+            svg {
+                color: $gray-900;
+            }
+        }
+
+        .card-text {
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            text-align: center;
+
+            h3 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                line-height: 1.1;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $gray-600;
+            }
+
+            span {
+                color: $gray-900;
+                font-weight: 600;
+            }
+        }
+
+        &:hover {
+            background-color: $gray-50;
+            transform: translateY(-0.5rem);
+        }
+    }
+}
+
+.features-actions {
+    @include flex(center, center, row);
+    gap: 1rem;
+}

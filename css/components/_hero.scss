@@ -2,7 +2,7 @@
     @include flex(center, center, column);
     padding: 10rem 4rem;
     gap: 2rem;
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
 }
 
@@ -10,6 +10,7 @@
     @include flex(center, center, column);
     text-align: center;
     gap: 1rem;
+    max-width: 800px;
 
     h1 {
         color: $gray-900;
