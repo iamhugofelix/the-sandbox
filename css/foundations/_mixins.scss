@@ -36,3 +36,15 @@
     }
 
 }
+
+// Font Responsiveness
+
+@mixin responsive-font($font-size) {
+
+    @media screen and (max-width: $bp-tablet) {
+        font-size: calc($font-size - 30%);
+    }
+    @media screen and (max-width: $bp-mobile) {
+        font-size: calc($font-size - 50%);
+    }
+}

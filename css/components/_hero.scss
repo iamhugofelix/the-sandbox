@@ -1,6 +1,6 @@
 .hero {
     @include flex(center, center, column);
-    padding: 10rem 4rem;
+    @include section-padding;
     gap: 2rem;
     max-width: 1280px;
     margin: auto;
@@ -14,19 +14,15 @@
 
     h1 {
         color: $gray-900;
+        @include responsive-font($h1)
     }
 
     p {
         font-size: $h4;
         color: $gray-600;
         font-weight: 400;
+        @include responsive-font($h4);
     }
-}
-
-.hero-actions {
-    @include flex(center, center, row);
-    gap: 1rem;
-    margin-bottom: 2rem;
 }
 
 .hero-video {
@@ -39,7 +35,8 @@
         pointer-events: none;
         z-index: -1;
         background-color: $gray-50;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        box-shadow: $box-shadow;
+        margin-top: 2rem;
     }
 
     .btn {

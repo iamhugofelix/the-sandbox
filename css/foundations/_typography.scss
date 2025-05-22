@@ -1,3 +1,5 @@
+@import './mixins';
+
 /* Font family */
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
@@ -16,6 +18,8 @@ $h4: 1.777rem;
 $h5: 1.333rem;
 $p: 1rem;
 $small: 0.875rem;
+
+// Responsive font calculations
 
 /* Font weights */
 $bold: 700;
@@ -39,48 +43,35 @@ h1 {
   font-weight: $bold;
   letter-spacing: -2px;
   line-height: 1.1;
+  @include responsive-font($h1);
 }
 
 h2 {
   font-size: $h2;
   font-weight: $bold;
   letter-spacing: -1px;
+  line-height: 1.1;
+  @include responsive-font($h2);
 }
 
-h3 {font-size: $h3}
-
-h4 {font-size: $h4;}
-
-h5 {font-size: $h5;}
-
-
-// typography helpers
-$alignments: center, right, top; 
- 
-@each $align in $alignments {
-    .text-#{$align} {
-        text-align: $align;
-    }
+h3 {
+  font-size: $h3;
+  font-weight: $bold;
+  line-height: 1.1;
+  @include responsive-font($h3);
 }
 
-
-@media all and (max-width: 768px) {
-  h1 {
-    font-size: #{$h1 * 0.50};
-  }
-  h2 {
-    font-size: #{$h2 * 0.90};
-  }
-
-  h3 {
-    font-size: #{$h3 * 0.70}
-  };
-
-  h4 {
-    font-size: #{$h4 * 0.70}
-  };
-
-  h5 {
-    font-size: #{1rem}
-  };
+h4 {
+  font-size: $h4;
+  font-weight: $bold;
+  line-height: 1.1;
+  @include responsive-font($h4);
 }
+
+h5 {
+  font-size: $h5;
+  font-weight: $bold;
+  line-height: 1.1;
+  @include responsive-font($h5);
+}
+

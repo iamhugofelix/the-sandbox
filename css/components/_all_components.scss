@@ -4,3 +4,9 @@
 @import 'how_it_works';
 @import 'features_grid';
 @import 'blog';
+
+
+.actions {
+    @include flex(center, center, row);
+    gap: 1rem;
+}
