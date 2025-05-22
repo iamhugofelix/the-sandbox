@@ -10,13 +10,12 @@
     height: 65%;
     background-color:$gray-100;
     pointer-events: none;
-    // transform: rotate(2deg);
 }
 
 .hiw-wrapper {
     @include flex(center, center, column);
+    @include section-padding;
     position: relative;
-    padding: 8rem 4rem 8rem 4rem;
     gap: 3rem;
     max-width: 1280px;
     margin: auto;
@@ -24,12 +23,12 @@
 
     .hiw-title {
         @include flex(center, center, column);
-        color: $gray-900;
-        gap: 0.5rem;
+        gap: 1rem;
         max-width: 800px;
 
         h2 {
             text-align: center;
+            @include responsive-font($h2)
         }
     
         p {
@@ -50,9 +49,15 @@
         display: none;
     }
 
-    .hiw-actions {
-        @include flex(center, center, row);
-        gap: 1rem;
+    @media screen and (max-width: $bp-mobile) {
+        img {
+            display: none;
+        }
+
+        .mobile-image {
+            display: block;
+        }
     }
+
 }
 

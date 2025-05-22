@@ -35,6 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+  color: $gray-900;
   text-wrap: balance;
 }
 
@@ -72,6 +73,5 @@ h5 {
   font-size: $h5;
   font-weight: $bold;
   line-height: 1.1;
-  @include responsive-font($h5);
 }
 
