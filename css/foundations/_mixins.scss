@@ -27,3 +27,12 @@
         }
     }
 }
+
+@mixin section-padding {
+    padding: 8rem 4rem;
+
+    @media screen and (max-width: $bp-tablet) {
+        padding: 4rem 2rem;
+    }
+
+}

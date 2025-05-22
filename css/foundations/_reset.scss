@@ -45,3 +45,14 @@ table {
 * {
     box-sizing: border-box;
 }
+
+
+// Breakpoints
+$bp-large: 1200px;
+$bp-desktop: 1080px;
+$bp-tablet: 880px;
+$bp-mobile: 640px;
+
+// Content-width
+$content-default: 1280px;
+$content-wide: 1440px;

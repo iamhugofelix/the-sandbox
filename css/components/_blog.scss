@@ -1,8 +1,23 @@
 .blog {
-    @include flex(center, center, column);
+    @include flex(start, center, column);
+    @include section-padding;
     gap: 2rem;
     margin: auto;
     max-width: 1280px;
+
+    .blog-title {
+        text-align: center;
+
+        h2 {
+            color: $gray-900;
+        }
+
+        p {
+            font-size: $h5;
+            color: $gray-600;
+        }
+    }
+
 }
 
 .blog-grid {
@@ -10,15 +25,45 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
+    grid-auto-rows: auto;
+
+    .last-item {
+        display: none;
+    }
+
+    @media screen and (max-width: 1080px) {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    @media screen and (max-width: 840px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .last-item {
+            display: block;
+        }
+
+    }
+
+    @media screen and (max-width: 680px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
 }
 
 .blog-card {
-    @include flex(center, center, column);
+    @include flex(start, center, column);
     gap: 0.75rem;
-    border: solid 1px $gray-200;
     border-radius: 0.5rem;
     overflow: hidden;
     padding: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    height: auto;
+    align-self: start;
+
+
 
     img {
         width: 100%;
@@ -29,7 +74,76 @@
     }
 
     .post-content {
+        @include flex(center, start, column);
+        gap: 0.5rem;
         width: 100%;
+
+        .post-categories {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .post-text {
+            h5 {
+                font-weight: $bold;
+                color: $gray-900;
+                line-height: 1.4;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                color: $gray-600;
+            }
+        }
+
+        .post-author {
+            @include flex(center, center, row);
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+
+            .author-avatar {
+                @include flex(center, center, row);
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $brand-primary-base;
+                color: $white;
+                border-radius: 0.25rem;
+
+                p {
+                    font-size: $small;
+                    line-height: 0;
+                    font-weight: $bold;
+                }
+
+                &--image {
+                    background-image: url('../../assets/hp-profile.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    p {
+                       display: none;
+                    }
+                }
+
+                &--image2 {
+                    background-image: url('../../assets/rw-profile.jpeg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    p {
+                       display: none;
+                    }
+                }
+            }
+
+            .author-name {
+                color: $gray-800;
+                font-size: $small;
+            }
+        }
+    }
+
+    &:hover {
+        transform: scale(1.04);
     }
     
 }
