@@ -21,3 +21,9 @@ $brand-primary-darker: #1e40af;
 
 // Shadows
 $box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+
+// SVG Default Color
+
+svg {
+    color: $gray-900;
+}

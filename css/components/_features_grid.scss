@@ -1,36 +1,48 @@
+@import '../foundations/mixins';
+
 .features {
     position: relative;
     @include flex(center, center, column);
+    @include section-padding;
     gap: 4rem;
-    padding: 8rem 4rem;
-    max-width: 1280px;
-    margin: auto;
+    max-width: $content-default;
+}
 
+.features-bg {
+    background-color: $gray-200;
+    position: absolute;
+    top: 38%;
+    width: 100vw;
+    height: 18rem;
+    pointer-events: none;
+    z-index: -1;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: $bp-tablet) {
     .features-bg {
-        background-color: $gray-900;
-        position: absolute;
-        top: 38%;
-        width: 100vw;
-        height: 18rem;
-        // transform: rotate(-1deg);
-        pointer-events: none;
-        z-index: -1;
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        display: none;
     }
 }
 
 .features-title{
-    text-align: center;
-    color: $gray-900;
+    @include flex(center, center, column);
+    gap: 1rem;
     max-width: 800px;
+
+    h2 {
+        text-align: center;
+        @include responsive-font($h2)
+    }
 
     p {
         font-size: $h5;
+        text-align: center;
         color: $gray-600;
     }
 
@@ -47,48 +59,49 @@
         @include flex(center, center, column);
         gap: 0.5rem;
         padding: 2rem 1rem;
+        border: solid 1px $gray-200;
         border-radius: 0.5rem;
         background-color: $white;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        box-shadow: $box-shadow;
         cursor: pointer;
         transition: all 0.4s ease-in-out;
-
-        .card-icon {
-            svg {
-                color: $gray-900;
-            }
-        }
 
         .card-text {
             @include flex(center, center, column);
             gap: 0.5rem;
             text-align: center;
-
+    
             h3 {
-                font-size: 1.25rem;
-                font-weight: 600;
+                font-size: $h6;
                 line-height: 1.1;
             }
-
+    
             p {
-                font-size: 1rem;
                 color: $gray-600;
+                text-wrap: balance;
             }
-
+    
             span {
                 color: $gray-900;
-                font-weight: 600;
+                font-weight: $bold;
             }
+    
         }
 
         &:hover {
             background-color: $gray-50;
             transform: translateY(-0.5rem);
         }
-    }
-}
 
-.features-actions {
-    @include flex(center, center, row);
-    gap: 1rem;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 380px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
