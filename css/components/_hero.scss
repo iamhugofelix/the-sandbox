@@ -1,6 +1,6 @@
 .hero {
     @include flex(center, center, column);
-    @include section-padding;
+@include section-padding;
     gap: 2rem;
     max-width: 1280px;
     margin: auto;
