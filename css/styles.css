@@ -2,6 +2,7 @@
 /* Gray */
 /* Brand Colors */
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -136,6 +137,137 @@ h5 {
 /* Components */
 /* Gray */
 /* Brand Colors */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Font family */
+/* Make text crispier */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Font sizes */
+/* Font weights */
+html {
+  font-size: 100%;
+} /*16px*/
+body {
+  font-family: "Onest", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 4.209rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 3.157rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-top {
+  text-align: top;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 2.1045rem;
+  }
+  h2 {
+    font-size: 2.8413rem;
+  }
+  h3 {
+    font-size: 1.6583rem;
+  }
+  h4 {
+    font-size: 1.2439rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+}
 .btn {
   cursor: pointer;
   font-weight: 500;
@@ -256,21 +388,45 @@ h5 {
   max-width: 1440px;
   margin: auto;
 }
-
-.nav-left {
+.nav-bar .nav-left {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 2rem;
 }
-.nav-left ul {
+.nav-bar .nav-left ul {
   display: flex;
   gap: 0.5rem;
 }
-.nav-left img {
+.nav-bar .nav-left img {
   max-width: 7.5em;
   cursor: pointer;
+}
+.nav-bar .nav-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.nav-bar .nav-right svg {
+  color: #111827;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 880px) {
+  .nav-bar .nav-left ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .nav-bar .nav-right a:first-child {
+    display: none;
+  }
+  .nav-bar .nav-right svg {
+    display: block;
+  }
 }
 
 .dropdown {
@@ -299,14 +455,6 @@ h5 {
 .dropdown:hover .dropdown-menu, .dropdown .dropdown-spacer {
   display: flex !important;
   flex-direction: column;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .hero {

@@ -3,22 +3,53 @@
     padding: 1rem 2rem;
     max-width: $content-wide;
     margin: auto;
-}
 
-.nav-left {
-    @include flex (center, center, row);
-    gap: 2rem;
-
-    ul {
-        display: flex;
-        gap: 0.5rem;
+    .nav-left {
+        @include flex (center, center, row);
+        gap: 2rem;
+    
+        ul {
+            display: flex;
+            gap: 0.5rem;
+        }
+    
+        img {
+            max-width: 7.5em;
+            cursor: pointer;
+        }
     }
 
-    img {
-        max-width: 7.5em;
-        cursor: pointer;
+    .nav-right {
+        @include flex (end, center, row);
+        gap: 1rem;
+
+        svg {
+            color: $gray-900;
+            display: none;
+            cursor: pointer;
+        }
     }
+
+    // Responsive
+    @media screen and (max-width: $bp-tablet) {
+        .nav-left ul {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $bp-mobile) {
+        .nav-right {
+            a:first-child {
+                display: none;
+            }
+            svg {
+                display:  block;
+            }
+        }
+
+    }
+
 }
+
 
 .dropdown {
     position: relative;
@@ -50,10 +81,5 @@
         display: flex !important;
         flex-direction: column;
     }
-}
-
-.nav-right {
-    @include flex (end, center, row);
-    gap: 1rem;
 }
 
