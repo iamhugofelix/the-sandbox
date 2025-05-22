@@ -19,31 +19,5 @@ $brand-primary-base: #2563eb;
 $brand-primary-dark: #1d4ed8;
 $brand-primary-darker: #1e40af;
 
-
-
-$black: #191919;
-$cyan: #338cf4;
-$blue: #0064da;
-$light-gray: #fbfbfb;
-
-
-@mixin background($color) {
-    @if $color == 'black' {
-        background: $black;
-        color: $white;
-    }
-    @if $color == 'blue' {
-        background: $blue;
-        color: $white;
-    }
-    @if $color == 'white' {
-        background: $white;
-        color: $blue;
-    }
-}
-
-.bg {
-    &-gray {
-        background: $light-gray;
-    }
-}
+// Shadows
+$box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
